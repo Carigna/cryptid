@@ -19,7 +19,7 @@ module Cryptid
     def find_from_cryptids(cryptids, options)
         ids = Array.new
         cryptids.each { |id|
-            decrypted_id = id.split(/-/)
+            decrypted_id = id.split(/00000/)
 	        checksum = (decrypted_id[1].to_i * PRIME & MAXID)
 	        if(checksum == decrypted_id[0].to_i)
 			  ids << decrypted_id[1].to_i
@@ -43,7 +43,7 @@ module Cryptid
 
   module InstanceMethods
     def to_param
-      (id * PRIME & MAXID).to_s + "-" + id.to_s
+      (id * PRIME & MAXID).to_s + "00000" + id.to_s
     end
   end
 
