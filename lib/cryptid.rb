@@ -1,5 +1,4 @@
 module Cryptid
-  require 'crypt/rijndael'
   PRIME = 2654435761412392
   MAXID = 2**31-1
   module ClassMethods
