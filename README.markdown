@@ -1,7 +1,8 @@
-Cryptid
-===========
+# Cryptid
 
 The cryptid plugin allows you to use crypted id to identify object identities in your routes.
+
+## Installation
 
 To install, simply run the following command from your project.
 
@@ -9,25 +10,25 @@ To install, simply run the following command from your project.
 
 Then in your ActiveRecord model classes simply add the include statement.
 
-Example
-=======
+## Usage
 
-class Car < ActiveRecord::Base
+    class Foo < ActiveRecord::Base
 
-  route_by :name
+        include Cryptid
 
-end
+    end
 
-As a result of this statement, assuming your Car object has an id of 114 and
-a :name attribute with the value "eleanor", your resourceful routes change from this:
+As a result of this statement, assuming your Foo object has an id of 144, your resourceful routes
+change from this:
 
-  http://server.com/cars/114
+    http://server.com/foos/114
 
 to:
 
-  http://server.com/cars/eleanor
+    http://server.com/foos/9873498273400000144
 
-This is good for cases where you don't want your record ids in your Urls.
+By using ids with checksum web user can not view other resources by just adding ids.
 
-Copyright (c) 2008 Gnoso Inc., released under the MIT license
 
+## License
+BrowserCMS is released under a MIT license, and is copyright 2009 Carigna Oy. Copy of the license can be found in LICENSE.txt.
