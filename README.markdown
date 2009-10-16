@@ -31,4 +31,4 @@ By using ids with checksum web user can not view other resources by just adding 
 
 
 ## License
-BrowserCMS is released under a MIT license, and is copyright 2009 Carigna Oy. Copy of the license can be found in LICENSE.txt.
+Cryptid is released under a MIT license, and is copyright 2009 Carigna Oy. Copy of the license can be found in LICENSE.txt.
