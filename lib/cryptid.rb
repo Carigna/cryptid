@@ -39,6 +39,7 @@ module Cryptid
         alias_method_chain :find, :cryptid
       end
     end
+    include InstanceMethods unless included_modules.include?(InstanceMethods)
   end
 
   module InstanceMethods
