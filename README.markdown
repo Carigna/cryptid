@@ -14,7 +14,7 @@ Then in your ActiveRecord model classes simply add the include statement.
 
     class Foo < ActiveRecord::Base
 
-        include Cryptid
+          encrypt_id
 
     end
 
